@@ -1,4 +1,3 @@
-{% extends 'food/base.html' %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -14,28 +13,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">FoodApp</a>
+
+        <div class="navbar">
+            <a href="" class="nav-item navlink" href="#">Add Item</a>
+            <a href="" class="nav-item navlink" href="#">Delete Item</a>
+            <a href="" class="nav-item navlink" href="#">View Item</a>
+        </div>
+
+    </nav>
+
+
+
     {% block body %}
-    {% for item in item_list %}
-    
-    <ul>
-        <li>
-            
-            <a href="{% url 'food:detail' item.id %}">{{ item.id }} -- {{ item.item_name }}</a>
-        </li>
-    </ul>
-    {% endfor %}
-    {% endblock%}
-
-
-    
-
-    
-
-
-
-    
-    <!-- JavaScript Bundle with Popper -->
-    
+    {% endblock %}
+      
 </body>
 </html>
